@@ -1,3 +1,7 @@
+# В этом учебном проекте я сделал небольшое React-приложение демонстрирующее погоду в разных городах мира. Тут есть текстовое поле куда ты вводишь название города и затем получаешь погоду в этом городе. Также можно редактировать текущую запись.
+
+# In this learning project I made a small React-application that shows the weather in different cities around the world. There is a text box where you can enter the name of a city and then get the weather in that city. You can also edit the current entry.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
