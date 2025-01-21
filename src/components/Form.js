@@ -12,8 +12,7 @@ function Form(props) {
         <div>
             <h1>Получение погоды</h1>
             <form>
-                <input placeholder="Введите город" value={city}
-                    onChange={e => setCity(e.target.value)} />
+                <input placeholder="Введите город" value={city} onChange={e => setCity(e.target.value)}/>
                 <button type="button" onClick={() => handleGetWeather(city)}>Получить</button>
             </form>
         </div>
