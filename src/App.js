@@ -14,23 +14,20 @@ function App() {
         const API = '3d9de74844d28377e81415151cbe6a66'
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API}&units=metric`
 
-        axios.get(url)
-            .then(res => {
-                const newCityData = {
-                    name: city,
-                    temp: res.data.main.temp,
-                    feels: res.data.main.feels_like
-                }
-                if (oldCityName) {
-                    setCities(
-                        cities => cities.map(city => city.name === oldCityName ? newCityData : city)
-                    )
-                }
-                else {
-                    setCities(cities => [newCityData, ...cities])
-                }
-            })
-            .catch(err => console.log(err))
+        axios.get(url).then(res => {
+            const newCityData = {
+                name: city,
+                temp: res.data.main.temp,
+                feels: res.data.main.feels_like
+            }
+            if (oldCityName) {
+                setCities(
+                    cities => cities.map(city => city.name === oldCityName ? newCityData : city)
+                )
+            } else {
+                setCities(cities => [newCityData, ...cities])
+            }
+        }).catch(err => console.log(err))
     }
 
     const deleteWeather = (city) => {
